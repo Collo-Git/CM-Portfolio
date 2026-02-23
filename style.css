@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #111;
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+
+.nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+/* Hero */
+.hero, .featured, .contacts {
+  /* min-height: 50vh; */
+  padding: 140px 60px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-image: url(images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* keeps it static */
+  position: relative;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 600;
+  max-width: 800px;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 18px;
+  max-width: 600px;
+  color: #ffffff;
+}
+
+.cta {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 14px 28px;
+  border: 1px solid #00f2ff;
+  text-decoration: none;
+  color: #00f2ff;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* Featured Work */
+.featured {
+  padding: 100px 60px;
+}
+
+.featured h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card span {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* Contacts */
+    .contacts {
+        padding: 100px 60px;
+        text-align: center;
+    }
+    
+    .contacts h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .contacts p {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: #ffffff;
+    }
+
+    .contactsbox {
+  width: 30%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #00f2ff;
+  border-radius: 16px;
+  background: rgba(0, 242, 255, 0.18);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(0, 242, 255, 0.25);
+}
+
+/* Footer */
+.footer {
+  padding: 40px 60px;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+  .contactsbox {
+    width: 90%;
+    padding: 18px;
+  }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* .nav {
+    padding: 20px;
+  } */
+
+  .hero,
+  .featured,
+  .contacts,
+  .footer {
+    padding: 80px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav nav a {
+    margin-left: 15px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .featured,
+  .contacts {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  a {
+    padding: 6px 0;
+  }
+}
